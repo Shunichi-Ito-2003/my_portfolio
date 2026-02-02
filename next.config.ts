@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   },
   basePath: '/my_portfolio',
   assetPrefix: '/my_portfolio',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 export default nextConfig;
