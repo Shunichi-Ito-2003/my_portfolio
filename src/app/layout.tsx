@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter, Cinzel, Shippori_Mincho } from "next/font/google";
-import { Header } from "@/components/layout/Header";
+import { Navigation } from "@/components/layout/Navigation";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import "./globals.css";
 
@@ -35,16 +35,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="ja" className="dark">
-      <body
-        className={`${playfair.variable} ${inter.variable} ${cinzel.variable} ${shippori.variable} antialiased bg-background text-foreground`}
-      >
-        <LanguageProvider>
-          <Header />
-          {children}
-        </LanguageProvider>
-      </body>
-    </html>
+  <body
+    className={`${playfair.variable} ${inter.variable} ${cinzel.variable} ${shippori.variable} antialiased bg-background text-foreground min-h-screen flex flex-col`}
+  >
+    <LanguageProvider>
+      <Navigation />
+      <main className="flex-grow pt-16">
+        {children}
+      </main>
+    </LanguageProvider>
+  </body>
+    </html >
   );
 }

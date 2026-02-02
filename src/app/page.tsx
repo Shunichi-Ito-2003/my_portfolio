@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Ticket, BookOpen, PenTool } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
@@ -9,34 +9,55 @@ export default function Home() {
     const { t } = useLanguage();
 
     return (
-        <div className="flex flex-col min-h-[calc(100vh-5rem)] justify-center items-center p-8 text-center bg-gradient-to-b from-transparent to-black/20">
-            <div className="max-w-4xl space-y-8 animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-5">
-                <h1 className="text-4xl md:text-7xl font-bold font-cinematic tracking-[0.2em] leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/40">
-                    {t('name')}
-                </h1>
+        <div className="flex flex-col min-h-[calc(100vh-5rem)]">
+            {/* Hero Section */}
+            <section className="flex-grow flex flex-col justify-center items-center text-center px-6 py-20 bg-gradient-to-b from-transparent to-black/40">
+                <div className="max-w-4xl space-y-6 animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-5">
+                    <h1 className="text-5xl md:text-8xl font-bold font-cinematic tracking-[0.2em] leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-white/90 to-white/50">
+                        {t('name')}
+                    </h1>
 
-                <p className="text-xl md:text-2xl text-white/60 tracking-widest uppercase font-light">
-                    {t('job')}
-                </p>
+                    <p className="text-xl md:text-3xl text-gold/80 tracking-widest uppercase font-light font-serif">
+                        {t('job')}
+                    </p>
 
-                <p className="text-sm md:text-base text-white/40 tracking-wider">
-                    {t('university')}
-                </p>
+                    <p className="text-sm md:text-base text-white/40 tracking-wider font-light">
+                        {t('university')}
+                    </p>
+                </div>
+            </section>
 
-                <div className="flex flex-col md:flex-row gap-6 justify-center pt-8">
-                    <Link href="/about">
-                        <Button size="lg" className="rounded-none border border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/40 backdrop-blur-sm transition-all duration-500 w-full md:w-auto">
-                            <span className="tracking-[0.2em] mr-2">{t('profile')}</span>
-                            <ArrowRight size={16} />
-                        </Button>
+            {/* Quick Links Section */}
+            <section className="py-16 px-6 bg-secondary/30 backdrop-blur-sm border-t border-white/5">
+                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {/* News / Ticket Link */}
+                    <Link href="/news" className="group p-8 border border-white/10 bg-black/40 hover:bg-white/5 transition-all duration-500 flex flex-col items-center text-center space-y-4">
+                        <Ticket className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-500" />
+                        <h3 className="text-xl font-cinematic tracking-widest text-white">LATEST NEWS</h3>
+                        <p className="text-sm text-white/50 leading-relaxed">
+                            出演情報・チケット予約はこちら
+                        </p>
                     </Link>
-                    <Link href="/digital-garden">
-                        <Button size="lg" variant="outline" className="rounded-none border-white/10 hover:bg-white/5 hover:text-white transition-all duration-500 w-full md:w-auto">
-                            <span className="tracking-[0.2em]">{t('digitalGarden')}</span>
-                        </Button>
+
+                    {/* Works Link */}
+                    <Link href="/works" className="group p-8 border border-white/10 bg-black/40 hover:bg-white/5 transition-all duration-500 flex flex-col items-center text-center space-y-4">
+                        <BookOpen className="w-8 h-8 text-white/70 group-hover:text-gold transition-colors duration-500" />
+                        <h3 className="text-xl font-cinematic tracking-widest text-white">WORKS</h3>
+                        <p className="text-sm text-white/50 leading-relaxed">
+                            島守のうた・Note・活動アーカイブ
+                        </p>
+                    </Link>
+
+                    {/* Contact Link */}
+                    <Link href="/contact" className="group p-8 border border-white/10 bg-black/40 hover:bg-white/5 transition-all duration-500 flex flex-col items-center text-center space-y-4">
+                        <PenTool className="w-8 h-8 text-white/70 group-hover:text-gold transition-colors duration-500" />
+                        <h3 className="text-xl font-cinematic tracking-widest text-white">CONTACT</h3>
+                        <p className="text-sm text-white/50 leading-relaxed">
+                            お仕事のご依頼・お問い合わせ
+                        </p>
                     </Link>
                 </div>
-            </div>
+            </section>
         </div>
     );
 }
