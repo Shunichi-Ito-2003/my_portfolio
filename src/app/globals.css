@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  /* Cinematic Dark Theme */
+  --background: #0D0D0D;
+  /* Deepest Black */
+  --foreground: #E5E5E5;
+  /* Silver/Platinum */
+  --accent: #C5A065;
+  /* Muted Gold (Award style) */
+  --secondary: #1F1F1F;
+  /* Dark Grey for UI elements */
+  --muted: #666666;
+  /* Subtitle Grey */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+  --font-cinematic: var(--font-cinzel);
+  --font-japanese: var(--font-shippori);
+}
+
+@media (prefers-color-scheme: light) {
+
+  /* Keep dark theme even in light mode for cinematic feel, or invert carefully */
+  /* For now, enforcing dark mode as per "Cinematic" requirement */
+  :root {
+    --background: #0D0D0D;
+    --foreground: #E5E5E5;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  /* Prevent horizontal scroll from full-width elements */
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+/* Custom Utilities for Cinematic Vibe */
+.font-cinematic {
+  font-family: var(--font-cinematic);
+}
+
+.font-japanese {
+  font-family: var(--font-japanese);
+}
+
+.text-gold {
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(197, 160, 101, 0.3);
+}
