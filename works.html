@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKS | ITOU SHUNICHI</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+JP:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --text: #fff;
+            --gold: #d4af37;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Noto Serif JP', serif;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-family: 'Cinzel';
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--gold);
+        }
+
+        main {
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        h1 {
+            font-family: 'Cinzel';
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.2em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--gold);
+            letter-spacing: 0.1em;
+            margin-bottom: 4rem;
+            font-size: 0.9rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        .section-title {
+            font-family: 'Cinzel';
+            font-size: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-num {
+            color: var(--gold);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--gold);
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            color: var(--gold);
+            letter-spacing: 0.1em;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-family: 'Noto Serif JP';
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .date {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 1rem;
+            display: block;
+        }
+
+        @media(max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="logo">ITOU SHUNICHI</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="works.html" class="active">Works</a>
+        </div>
+    </nav>
+
+    <main>
+        <h1>WORKS</h1>
+        <p class="subtitle">活動アーカイブ</p>
+
+        <section>
+            <h2 class="section-title"><span class="section-num">01</span> MAIN PROJECTS</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="tag">STAGE / ACTING</span>
+                    <h3 class="card-title">島守のうた</h3>
+                    <p class="card-desc">沖縄戦・最後の官選知事である島田叡を演じる。沖縄・栃木・兵庫をつなぐ巡回公演。「命どぅ宝」を託された男の覚悟と人間味を表現。</p>
+                </div>
+                <div class="card">
+                    <span class="tag">CHARITY PROJECT</span>
+                    <h3 class="card-title">みんながサンタ！</h3>
+                    <p class="card-desc">「120家庭にケーキを届ける」チャリティー企画。企画・運営・サンタ役として参加。演劇のチケット代を支援に変える循環モデル。</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title"><span class="section-num">02</span> SCRIPT & DIRECTION</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="tag">SCRIPT / DIRECTION</span>
+                    <h3 class="card-title">まぁさん堂</h3>
+                    <p class="card-desc">「誰かを応援する演劇」第一弾。創業20年を迎える沖縄料理店「まぁさん堂」を舞台にした人情喜劇。15名のキャストと共に作り上げた地域密着型の物語。</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title"><span class="section-num">03</span> WRITING</h2>
+            <div class="grid">
+                <a href="https://note.com/icchi_ito/n/nf64aef62c4c3" target="_blank" class="card">
+                    <span class="tag">NOTE ARTICLE</span>
+                    <h3 class="card-title">「なにくそ、やるぞ」オリオンビール創業者・具志堅宗精</h3>
+                    <span class="date">2026.02.01</span>
+                </a>
+                <a href="https://note.com/icchi_ito/n/n801004c8649a" target="_blank" class="card">
+                    <span class="tag">NOTE ARTICLE</span>
+                    <h3 class="card-title">死地におもむく知事が、なぜ「明朗」でいられたのか</h3>
+                    <span class="date">2026.02.02</span>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
