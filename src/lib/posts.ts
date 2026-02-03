@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const CONTENT_DIR = path.join(process.cwd(), "../07_note原稿");
+const CONTENT_DIR = path.join(process.cwd(), "src/content/posts");
 
 export interface Post {
     slug: string;

@@ -35,16 +35,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  <body
-    className={`${playfair.variable} ${inter.variable} ${cinzel.variable} ${shippori.variable} antialiased bg-background text-foreground min-h-screen flex flex-col`}
-  >
-    <LanguageProvider>
-      <Navigation />
-      <main className="flex-grow pt-16">
-        {children}
-      </main>
-    </LanguageProvider>
-  </body>
-    </html >
+  return (
+    <html lang="ja">
+      <body
+        className={`${playfair.variable} ${inter.variable} ${cinzel.variable} ${shippori.variable} antialiased bg-background text-foreground min-h-screen flex flex-col`}
+      >
+        <LanguageProvider>
+          <Navigation />
+          <main className="flex-grow pt-16">
+            {children}
+          </main>
+        </LanguageProvider>
+      </body>
+    </html>
   );
 }
