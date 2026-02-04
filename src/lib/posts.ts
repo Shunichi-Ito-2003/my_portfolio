@@ -2,8 +2,8 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-// Points to 07_note原稿 relative to website/src/lib
-const CONTENT_DIR = path.join(process.cwd(), "../07_note原稿");
+// Points to the internal content directory
+const CONTENT_DIR = path.join(process.cwd(), "src/content/posts");
 
 export interface Post {
     slug: string;
