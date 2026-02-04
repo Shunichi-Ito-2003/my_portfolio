@@ -11,13 +11,25 @@ export default function Home() {
     return (
         <div className="flex flex-col min-h-[calc(100vh-5rem)]">
             {/* Hero Section */}
-            <section className="flex-grow flex flex-col justify-center items-center text-center px-6 py-20 bg-gradient-to-b from-transparent to-black/40">
-                <div className="max-w-4xl space-y-6 animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-5">
-                    <h1 className="text-5xl md:text-8xl font-bold font-cinematic tracking-[0.2em] leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-white/90 to-white/50">
+            <section className="relative flex-grow flex flex-col justify-center items-center text-center px-6 py-20 overflow-hidden">
+                {/* Background Image with Overlay */}
+                <div className="absolute inset-0 z-0 select-none">
+                    <img
+                        src="/my_portfolio/images/hero-bg.jpg"
+                        alt="Background"
+                        className="w-full h-full object-cover object-[center_20%] opacity-0 animate-in fade-in duration-1000"
+                        onLoad={(e) => (e.currentTarget.style.opacity = "1")}
+                    />
+                    <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                </div>
+
+                <div className="relative z-10 max-w-4xl space-y-6 animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-5">
+                    <h1 className="text-5xl md:text-8xl font-bold font-cinematic tracking-[0.2em] leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-white/90 to-white/50 drop-shadow-2xl">
                         {t('name')}
                     </h1>
 
-                    <p className="text-xl md:text-3xl text-gold/80 tracking-widest uppercase font-light font-serif">
+                    <p className="text-xl md:text-3xl text-gold/80 tracking-widest uppercase font-light font-serif drop-shadow-lg">
                         {t('job')}
                     </p>
 
