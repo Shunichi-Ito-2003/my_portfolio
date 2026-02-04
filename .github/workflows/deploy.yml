@@ -31,12 +31,6 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
-
-      - name: Sync Content from Obsidian
-        run: node scripts/sync-content.js
-
       - name: Build
         run: npm run build
 
