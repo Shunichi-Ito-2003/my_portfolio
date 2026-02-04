@@ -2,7 +2,8 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const CONTENT_DIR = path.join(process.cwd(), "src/content/posts");
+// Points to 07_note原稿 relative to website/src/lib
+const CONTENT_DIR = path.join(process.cwd(), "../07_note原稿");
 
 export interface Post {
     slug: string;
@@ -33,7 +34,7 @@ export function getAllPosts(): Post[] {
             const rawSlug = file.replace(/\.md$/, "");
 
             // Try to extract date and title from filename
-            // Pattern: YYYY-MM-DD Title
+            // Pattern: YYYY-MM-DD Title or YYYY-MM-DD_Title
             const filenameMatch = rawSlug.match(/^(\d{4}-\d{2}-\d{2})[\s_]*(.+)$/);
 
             let date = data.date || "2024-01-01";
@@ -44,11 +45,15 @@ export function getAllPosts(): Post[] {
                 if (!data.title) title = filenameMatch[2].trim();
             }
 
+            // Create excerpt from content if not provided
+            // Strip markdown chars and take first 100 chars
+            const excerpt = data.excerpt || content.replace(/^#+\s.*$/gm, '').replace(/[#*`]/g, "").trim().slice(0, 120) + "...";
+
             return {
-                slug: rawSlug, // Keeping raw slug to match filename for now, Next.js handles encoding
+                slug: rawSlug,
                 title,
                 date,
-                excerpt: data.excerpt || content.slice(0, 100).replace(/[#*`]/g, "") + "...",
+                excerpt,
                 content,
                 category: data.category || "Monologue",
                 tags: data.tags || [],
