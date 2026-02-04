@@ -3,7 +3,7 @@ const path = require('path');
 const Parser = require('rss-parser');
 const TurndownService = require('turndown');
 
-const RSS_URL = 'https://note.com/icchii_110/rss';
+const RSS_URL = 'https://note.com/icchiy_actor_md_student/rss';
 const POSTS_DIR = path.join(__dirname, '../src/content/posts');
 
 async function fetchNotePosts() {
@@ -13,10 +13,6 @@ async function fetchNotePosts() {
     if (!fs.existsSync(POSTS_DIR)) {
         fs.mkdirSync(POSTS_DIR, { recursive: true });
     } else {
-        // Clean up existing posts to ensure freshness? 
-        // Or keep them? User said "100 posts", RSS might only have 25.
-        // If we want to keep older posts, we shouldn't delete. 
-        // But for now, let's just overwrite/add.
         console.log("Updating posts in " + POSTS_DIR);
     }
 
@@ -78,8 +74,9 @@ ${contentMarkdown}
         console.log('RSS fetch complete.');
 
     } catch (error) {
-        console.error('Error fetching RSS:', error);
-        process.exit(1);
+        console.error('Error fetching RSS:', error.message);
+        // Do not exit with error, just log it so build can continue with existing files if any
+        // process.exit(1);
     }
 }
 
