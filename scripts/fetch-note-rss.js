@@ -3,7 +3,7 @@ const path = require('path');
 const Parser = require('rss-parser');
 const TurndownService = require('turndown');
 
-const RSS_URL = 'https://note.com/icchiy_actor_md_student/rss';
+const RSS_URL = 'https://note.com/icchi_ito/rss';
 const POSTS_DIR = path.join(__dirname, '../src/content/posts');
 
 async function fetchNotePosts() {
