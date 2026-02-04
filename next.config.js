@@ -6,6 +6,7 @@ const nextConfig = {
     },
     basePath: '/my_portfolio',
     assetPrefix: '/my_portfolio',
+    trailingSlash: true,
     typescript: {
         ignoreBuildErrors: true,
     },
@@ -14,4 +15,4 @@ const nextConfig = {
     },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
