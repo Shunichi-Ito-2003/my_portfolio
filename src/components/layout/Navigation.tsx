@@ -23,7 +23,7 @@ export function Navigation() {
             <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
                 {/* Logo / Name */}
                 <Link href="/" className="text-xl font-cinematic font-bold tracking-widest text-white hover:text-gold transition-colors">
-                    ITOU SHUNICHI
+                    ITO SHUNICHI
                 </Link>
 
                 {/* Desktop Menu */}

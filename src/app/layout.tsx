@@ -26,8 +26,8 @@ const shippori = Shippori_Mincho({
 });
 
 export const metadata: Metadata = {
-  title: "ITOU SHUNICHI | Actor & Creator",
-  description: "The official website of Itou Shunichi. Actor, Creator, and Thinker aiming for Cannes.",
+  title: "ITO SHUNICHI | Actor & Medical Student",
+  description: "The official website of Ito Shunichi. Actor, Medical Student, and Thinker aiming for Cannes.",
 };
 
 export default function RootLayout({

@@ -29,23 +29,18 @@ export default function ContactPage() {
                             以下のメールアドレスまたはSNSのDMよりお願いいたします。
                         </p>
 
-                        <a href="mailto:contact@example.com" className="inline-flex items-center gap-4 text-xl md:text-2xl font-cinematic text-gold hover:text-white transition-colors">
+                        <a href="mailto:changeupandshake@gmail.com" className="inline-flex items-center gap-4 text-xl md:text-2xl font-cinematic text-gold hover:text-white transition-colors">
                             <Mail className="w-6 h-6" />
-                            <span>contact@example.com</span>
+                            <span>changeupandshake@gmail.com</span>
                         </a>
                     </div>
 
                     <div className="flex flex-col gap-6 p-10 border border-white/10 bg-black/40 backdrop-blur-md rounded-sm">
                         <h3 className="text-center font-cinematic tracking-widest text-white mb-4">SOCIAL MEDIA</h3>
 
-                        <a href="https://x.com/shunichi_ito" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 px-6 py-4 bg-white/5 hover:bg-white/10 border border-white/5 transition-all group">
-                            <Twitter className="w-5 h-5 text-white/60 group-hover:text-gold" />
-                            <span className="tracking-wider text-sm">@shunichi_ito</span>
-                        </a>
-
-                        <a href="https://instagram.com/shunichi_gram" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 px-6 py-4 bg-white/5 hover:bg-white/10 border border-white/5 transition-all group">
+                        <a href="https://www.instagram.com/icchii_ito/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 px-6 py-4 bg-white/5 hover:bg-white/10 border border-white/5 transition-all group">
                             <Instagram className="w-5 h-5 text-white/60 group-hover:text-gold" />
-                            <span className="tracking-wider text-sm">@shunichi_gram</span>
+                            <span className="tracking-wider text-sm">@icchii_ito</span>
                         </a>
                     </div>
                 </div>

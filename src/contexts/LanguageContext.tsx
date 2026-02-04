@@ -23,8 +23,8 @@ export const translations = {
         readMore: "Read More",
         profile: "Profile",
         values: "Values",
-        name: "ITOU SHUNICHI",
-        job: "Actor / Creator",
+        name: "ITO SHUNICHI",
+        job: "Actor / Medical Student",
         university: "Ryukyu University School of Medicine",
     },
     ja: {
@@ -38,7 +38,7 @@ export const translations = {
         profile: "プロフィール",
         values: "価値観",
         name: "伊藤 駿一",
-        job: "俳優 / クリエイター",
+        job: "俳優 / 医学生",
         university: "琉球大学 医学部",
     },
 };
