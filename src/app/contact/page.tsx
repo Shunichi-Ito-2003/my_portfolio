@@ -1,3 +1,5 @@
+"use client";
+
 import { Mail, Instagram, Twitter } from "lucide-react";
 
 export default function ContactPage() {
