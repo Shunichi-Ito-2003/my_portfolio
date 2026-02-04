@@ -159,4 +159,10 @@ ${contentMarkdown}
     console.log(`Saved: ${filename}`);
 }
 
-fetchAllNotes().catch(console.error);
+fetchAllNotes().then(() => {
+    // Optional: Fail if no notes were processed?
+    // For now, just ensure clean exit
+}).catch(err => {
+    console.error("Fatal Error in Note Fetch:", err);
+    process.exit(1);
+});
